@@ -14,6 +14,7 @@
 HANDLE hMainThread;
 HMODULE g_hModule;
 
+// Function sapkoteteloqmajkangcibai
 // Function to initialize and show the console window
 void InitializeConsole() {
     FILE* pFile = nullptr;
@@ -44,12 +45,6 @@ struct Checkbox {
 void displayCheckboxes(const std::vector<Checkbox>& checkboxes, size_t selectedCheckbox) {
     system("cls"); // Clear the console (Windows specific)
 
-    printf(_XOR_("[Init] - Helldiver 2 PoC DLL Proxy...\n"));
-    printf(_XOR_("[Init] - Thanks to cfemen and gir489...\n"));
-
-    printf(_XOR_("[Ready] : Select some of the features below by pressing the [Space] key.\n"));
-    printf(_XOR_("[Ready] : Press [Enter] to run the feature you selected.\n"));
-    printf(_XOR_("[Ready] : After pressing [Enter], the selected features cannot be changed.\n"));
 
     std::cout << _XOR_("Checkboxes:\n");
     for (size_t i = 0; i < checkboxes.size(); ++i) {
@@ -75,11 +70,11 @@ DWORD WINAPI Payload(LPVOID lpParam)
     //Console Menu
     std::vector<Checkbox> checkboxes = { 
           {_XOR_("Inf Health"), false}
-        , {_XOR_("Inf Grenades"), false}
+       // , {_XOR_("Inf Grenades"), false}
         , {_XOR_("Inf Grenades(Legit)"), false}
-        , {_XOR_("Inf Ammo"), false}
+       // , {_XOR_("Inf Ammo"), false}
         , {_XOR_("Inf Ammo(Legit)"), false}
-        , {_XOR_("Inf Syringes"), false}
+      //  , {_XOR_("Inf Syringes"), false}
         , {_XOR_("Inf Syringes(Legit)"), false}
         , {_XOR_("Inf Stamina"), false}
         , {_XOR_("Inf Stratagems"), false}
@@ -87,8 +82,8 @@ DWORD WINAPI Payload(LPVOID lpParam)
         , {_XOR_("Inf Mission Time"), false}
         //, {"One / Two Hit Kill ( Bile Titan Bug, Aim Only Head )", false}
         , {_XOR_("No Reload"), false}
-        , {_XOR_("Max Resources"), false}
-        , {_XOR_("Add 5 Samples"), false}
+      //  , {_XOR_("Max Resources"), false}
+       // , {_XOR_("Add 5 Samples"), false}
         , {_XOR_("No Recoil"), false}
         , {_XOR_("Inf Backpack"), false}
         , {_XOR_("Inf Special Weapon"), false}
@@ -98,13 +93,13 @@ DWORD WINAPI Payload(LPVOID lpParam)
         , {_XOR_("No Stationary Turret Overheat"), false}
         , {_XOR_("No Backpack Shield Cooldown"), false}
         , {_XOR_("No JetPack Cooldown"), false}
-        , {_XOR_("All Stratagems in Loadout"), false}
-        , {_XOR_("All Equipment in Armory"), false}
-        , {_XOR_("All Armor in Armory"), false}
+      //  , {_XOR_("All Stratagems in Loadout"), false}
+       // , {_XOR_("All Equipment in Armory"), false}
+       // , {_XOR_("All Armor in Armory"), false}
     
     }; // Initialize all checkboxes to unchecked
     const int numCheckboxes = checkboxes.size();
-    size_t selectedCheckbox = 0;
+    size_t selectedCheckbox = 1;
     char userInput;
 
     HMODULE moduleHandle = nullptr;
