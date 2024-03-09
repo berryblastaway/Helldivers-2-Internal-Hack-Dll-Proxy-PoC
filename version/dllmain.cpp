@@ -99,7 +99,7 @@ DWORD WINAPI Payload(LPVOID lpParam)
     
     }; // Initialize all checkboxes to unchecked
     const int numCheckboxes = checkboxes.size();
-    size_t selectedCheckbox = 1;
+    size_t selectedCheckbox = 0;
     char userInput;
 
     HMODULE moduleHandle = nullptr;
